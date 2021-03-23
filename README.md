@@ -180,8 +180,7 @@ ggplot(data = hrAnalytics, aes(x = gender, fill = jobChange)) + geom_bar(positio
   labs(fill = "Job Change") +
   theme(plot.title = element_text(color="red", size=14, face="bold", hjust = 0.5))
 ```
-
-![](Project_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![alt text](Project_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 #From this graph, in terms of proportion, we see that more males are not looking for a job change than any other genders. Also, there are more males looking for a job change as well but in terms of sample size compared against each gender, that still seems relatively low.
