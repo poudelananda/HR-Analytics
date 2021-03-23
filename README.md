@@ -194,8 +194,7 @@ ggplot(data = hrAnalytics, aes(x = enrolled_university, fill = education_level))
   theme(plot.title = element_text(color="blue", size=14, face="bold", hjust = 0.5))
 ```
 
-![](Project_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
-
+![alt text](https://github.com/poudelananda/HR-Analytics/blob/main/unnamed-chunk-4-2.png)<!-- -->
 ``` r
 #From this graph, we see that for each category of current school enrollment based on the education level, more candidates are not looking for a job change. We can also look at the proportion table below for better understanding of the data.
 table(hrAnalytics[,c('enrolled_university', 'education_level', 'jobChange')]) %>% prop.table
@@ -236,8 +235,7 @@ ggplot(data = hrAnalytics, aes(x = major_discipline, y = training_hours)) + geom
   theme(plot.title = element_text(color="purple", size=14, face="bold", hjust = 0.5))
 ```
 
-![](Project_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
-
+![alt text](https://github.com/poudelananda/HR-Analytics/blob/main/unnamed-chunk-4-3.png)<!-- -->
 ``` r
 #From the box plot, we can see that the average number of training hours are about the same for all the majors.
 
@@ -262,8 +260,7 @@ ggplot(data = hrAnalytics, aes(x = groupedIndex, fill = jobChange)) + geom_bar(p
   labs(fill = "Job Change Status")
 ```
 
-![](Project_files/figure-gfm/unnamed-chunk-4-4.png)<!-- -->
-
+![alt text](https://github.com/poudelananda/HR-Analytics/blob/main/unnamed-chunk-4-4.png)<!-- -->
 ``` r
 #This is very interesting because we see that as the index increases, more candidates are lenient to not looking for a new job.
 ```
@@ -281,8 +278,7 @@ mod_fit <- train(target ~., data = train, method = "glm", family = "binomial")
 vip(mod_fit)
 ```
 
-![](Project_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
-
+![alt text](https://github.com/poudelananda/HR-Analytics/blob/main/unnamed-chunk-5-1.png)<!-- -->
 ``` r
 #From the variable importance model, we see that city development index variable is significantly improtant than other variables.
 
@@ -331,8 +327,7 @@ mod_fit2 <- train(target ~., data = hrAnalytics[,-c(1,2,15,16)], method = "glm",
 vip(mod_fit2)
 ```
 
-![](Project_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
-
+![alt text](https://github.com/poudelananda/HR-Analytics/blob/main/unnamed-chunk-6-1.png)<!-- -->
 ``` r
 pred2 <- predict(mod_fit2, newdata = test)
 confusionMatrix(data = pred2, test$target)
