@@ -5,6 +5,9 @@ Ananda Poudel
 
 # Libraries and setting directory.
 
+This dataset was downloaded from Kaggle.
+https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists
+
 ``` r
 setwd("/Users/apoudel53/Desktop/Job Search/project")
 #The data came in partitioned.
